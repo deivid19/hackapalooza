@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+
+<style media="screen">
+
+
+html{
+    font-size: 14px;
+    background-color: #868686;
+}
+
+*{
+    box-sizing: border-box;
+}
+ul{
+    border-top: 0.5rem double #fbf4f4;
+}
+
+img{
+    width: 100%;
+}
+
+/* Items Hover */
+.grid-item{
+    border:0.3rem #868686 solid;
+    padding: 0.5rem;
+    text-align: left;
+    border-radius: 1.9rem;
+    list-style: none;
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+ }
+.grid-item:hover{
+    background-color: rgb(211, 223, 223);
+    cursor: pointer;
+ }
+
+/*Float */
+#grid-floats{
+    overflow: hidden;
+    padding: 2% 0;
+}
+#grid-floats li{
+    float: left;
+    height:35rem;
+}
+
+/* Flex */
+#grid-flex{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    padding: 2rem 0;
+    }
+
+            /* Desktop */
+@media only screen and (min-width:769px){
+    li:first-child{
+        width: 50%;
+        background-color: #c1c5c2;
+    }
+    li:nth-child(n+2){
+        width: 25%;
+    }
+}
+            /* Ibad */
+@media only screen and (min-width:321px) and (max-width:768px){
+    li:nth-child(-n+2){
+        width: 50%;
+        background-color: #c1c5c2;
+    }
+    li:nth-child(n+3){
+        width: 33.3%;
+    }
+}
+            /* Phone */
+@media only screen and ( max-width:320px){
+    li:nth-child(1){
+        width: 100%;
+        background-color: rgb(193, 197, 194);
+    }
+        li:nth-child(n+2){
+        width: 50%;
+    }
+}
+
+
+/* Header Animation */
+header{
+    font-family: 'Times New Roman', Times;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    text-shadow:0.2rem 0.2rem rgb(36, 36, 36);
+    animation-duration: 2s;
+    animation-name: slideinl;
+}
+@keyframes slideinl {
+    from {
+      margin-right: 80%;
+      width: 50%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+
+/* Adress Animation */
+h2 {
+    padding: 0.5rem;
+    color: #fbf1f1;
+    text-shadow: 0.1rem 0.1rem #443c3c;
+    font-size:3rem;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation-duration: 4s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+     from {
+          margin-left: 100%;
+          width: 300%;
+     }
+
+    75% {
+          font-size: 300%;
+          margin-left: 25%;
+          width: 150%;
+     }
+
+    to {
+          margin-left: 0%;
+          width: 100%;
+     }
+}
+
+
+</style>
+
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="assets/hacker.svg" width="50" height="50" alt="">
+      </a>
+    </nav>
+
+
+  <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grids</title>
+        <link rel="stylesheet" href="stylehw2.css">
+    </head>
+    <body>
+
+        <main>
+            <section>
+
+                <ul id="grid-floats">
+                    <li class="grid-item">
+                        <h3>lorem</h3>
+                        <img src="https://unsplash.it/800/410">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </li>
+                    <li class="grid-item">
+                        <h3>lorem</h3>
+                        <img src="https://unsplash.it/800/420">
+                         <p dir="rtl">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </li>
+                    <li class="grid-item">
+                        <h3>lorem</h3>
+                        <img src="https://unsplash.it/800/430">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </li>
+                    <li class="grid-item">
+                        <h3>lorem</h3>
+                        <img src="https://unsplash.it/800/440">
+                        <p>Met een bereik van 500 meter, een Full HD-camera die met 30 fps opneemt en een f/2.8-lens maakt u met de DJI Phantom 3 standard de mooiste opnames vanuit de lucht.</p>
+                    </li>
+                    <li class="grid-item">
+                        <h3>lorem</h3>
+                        <img src="https://unsplash.it/800/450">
+                        <p>De Breeze 4K van Yuneec is makkelijk te besturen, veilig en snel in staat opnames te delen. De drone wordt bestuurd met je iOS- of Android-apparaat en produceert indrukwekkende 4K-beelden.</p>
+                    </li>
+                    <li class="grid-item">
+                        <h3>lorem</h3>
+                        <img src="https://unsplash.it/800/460">
+                        <p>Met de Nano Drone kan iedereen het gevoel van vliegen met een drone ervaren. De zeer kleine drone van slechts vier centimeter breed is na uitpakken direct klaar om te vliegen.</p>
+                    </li>
+                    <li class="grid-item">
+                        <h3>lorem</h3>
+                        <img src="https://unsplash.it/800/470">
+                        <p>Met prachtige luchtfoto's en -video's maak je indruk. De DJI Spreading Wings S900 is een lichtgewicht drone die met zijn draaggewicht van maximaal 8,2 kilogram voorziet in het maken van dergelijke beelden.</p>
+                    </li>
+
+
+
+                </ul>
+
+            </section>
+
+        </main>
+    </body>
+</html>
+
+
+  	<!-- Typekit Fonts -->
+    <footer class="row">
+      <div class="col-md-6">
+        <p>© Copyright no one at all. Go to town.</p>
+      </div>
+      <div class="col-md-6">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="#">Section 1</a></li>
+          <li><a href="#">Section 2</a></li>
+          <li><a href="#">Section 3</a></li>
+          <li><a href="#">Section 4</a></li>
+          <li><a href="#">Section 5</a></li>
+          <li><a href="#">Section 6</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+
+  </body>
+
+</html>

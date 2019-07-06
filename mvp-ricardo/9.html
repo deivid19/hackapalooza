@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+
+<style media="screen">
+  body {
+    color: #676767;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  .bold {
+    font-weight: 500;
+  }
+
+  /* Menú */
+  .menu {
+    padding: 1.5rem 2rem;
+  }
+
+  .ctn-links li a {
+    color: #676767;
+    font: 100 20px 'Roboto', sans-serif;
+  }
+
+  /* Slider */
+  .slider {
+    height: 65vh;
+  }
+
+  .wallpaper {
+    animation: slider 14s ease infinite;
+    background: url('https://firebasestorage.googleapis.com/v0/b/web-dinamica-d78f3.appspot.com/o/photos%2Fimgs%2Fcarrousel.png?alt=media&token=e9263abd-0355-4034-a1df-b9454cacf5d8') #ffffff center / cover no-repeat scroll;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .wallpaper:nth-child(2) {
+    animation-delay: 8s;
+    background-image: url('https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&h=650&w=940');
+  }
+
+  .wallpaper:nth-child(3) {
+    background-image: url('https://images.pexels.com/photos/6718/mountains-clouds-forest-trees.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  	animation-delay: 16s;
+  }
+
+  .ctn-content-slider h1 {
+    color: #6a6a6c;
+    font-weight: 100;
+  }
+
+  .btn-slider {
+    background-color: #ec5483;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 0.5rem 4rem;
+  }
+
+  .ctn-book-now {
+    background-color: #000000;
+    font: bold 18px sans-serif;
+    padding: 0.5rem 1rem;
+    right: calc(0% - 5px);
+    transform: rotateZ(270deg) translateY(100%);
+    z-index: 1;
+  }
+
+  /* Servicios */
+  .ctn-services {
+    color: #929292;
+    padding: 100px;
+  }
+
+  .btn-services {
+    color: #6f6f6f;
+    margin: 1.5rem 0 3rem 0;
+  }
+
+  /* About us */
+  .about-us {
+    background-color: #fcfcfc;
+  }
+
+  .ctn-about-us {
+    padding: 50px;
+  }
+
+  .ctn-about-us article {
+    color: #929292;
+  }
+
+  .ctn-about-us article > p:before {
+    background-color: #fcfcfc;
+    border: 1px solid #e5e5e5;
+    border-top-width: 0;
+    border-left-width: 0;
+    content: '';
+    height: 10px;
+    left: 50%;
+    position: absolute;
+    top: 98%;
+    transform: translateX(-50%) rotateZ(45deg);
+    width: 10px;
+  }
+
+  .ctn-about-us article > p {
+    box-shadow: 0 0 0 1px #e5e5e5;
+    padding: 2rem 1rem;
+  }
+
+  .ctn-profile h2 {
+    font: 400 20px 'Roboto', sans-serif;
+  }
+
+  .ctn-profile p {
+    font: 100 16px 'Roboto', sans-serif;
+  }
+
+  /* Brand */
+  .ctn-brand {
+    padding: 100px;
+  }
+
+  .box-brand {
+    box-shadow: 0 0 0 4px #e8e8e8;
+    color: #e9e9e9;
+  }
+
+  .box-brand h2 {
+    font: 700 25px 'Roboto', sans-serif;
+  }
+
+  .box-brand p {
+    font-size: 15px;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #38404b;
+    padding: 55px 0px 75px 0;
+  }
+
+  footer ol li a {
+    color: #bec6d3;
+  }
+
+  .copy-right {
+    color: #bec6d3;
+    font-size: 13px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    /* Servicios */
+    .ctn-services {
+      padding: 50px 20px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    /* General */
+    h1, h2 {
+      font-size: 35px;
+    }
+
+    /* Menú */
+    .menu {
+      flex-direction: column;
+    }
+  }
+
+  @keyframes slider {
+  	20% {
+  		opacity: 1;
+  		visibility: visible;
+    }
+  }
+</style>
+
+
+  <body>
+
+    <nav class="navbar navbar-dark bg-dark">
+           <a class="navbar-brand" href="#">
+             <img src="images/infinidat.png" width="300" height="50" alt="">
+               </a>
+                   </nav>
+
+
+
+                   <!-- Slider -->
+                   <section>
+                   	<div class="align-items-center d-flex justify-content-center position-relative text-center w-100 slider">
+                   		<div class="h-100 position-absolute w-100 wallpaper"></div>
+                   		<div class="h-100 position-absolute w-100 wallpaper"></div>
+                   		<div class="h-100 position-absolute w-100 wallpaper"></div>
+                   		<div class="position-relative ctn-content-slider">
+                   			<h1 class="mb-5">
+
+                   				inicio
+                   			</h1>
+
+                   			<button type="button" class="btn text-white btn-slider">
+                   				saber más
+                   				<i class="fa fa-long-arrow-right ml-3"></i>
+                   			</button>
+                   		</div>
+
+                   	</div>
+                   </section>
+
+                   <main>
+
+                   	<!-- Servicios -->
+                   	<section>
+                   		<div class="bg-white container ctn-services">
+                   			<div class="row">
+                   				<div class="col-md-4 col-sm-12 text-center">
+                   					<img src="https://firebasestorage.googleapis.com/v0/b/web-dinamica-d78f3.appspot.com/o/photos%2Fimgs%2Freturn.png?alt=media&token=c6d4e8dc-a4bc-435e-93e6-61d6872859cc" alt="Icon" title="Icon" class="mb-4">
+                   					<p>
+                   						phoncus ut, imperdiet vel venenatis vitae justo ullam dictum felis eu pede mollis pretium massa.
+                   					</p>
+                   					<button type="button" class="bg-transparent btn text-uppercase btn-services">
+                   						Read More
+                   						<i class="fa fa-long-arrow-right ml-3"></i>
+                   					</button>
+                   				</div>
+
+                   				<div class="col-md-4 col-sm-12 text-center">
+                   					<img src="https://firebasestorage.googleapis.com/v0/b/web-dinamica-d78f3.appspot.com/o/photos%2Fimgs%2Fstopwatch.png?alt=media&token=fc1c0510-5090-4493-a086-623f27cec7e4" alt="Icon" title="Icon" class="mb-4">
+                   					<p>
+                   						phoncus ut, imperdiet vel venenatis vitae justo ullam dictum felis eu pede mollis pretium massa.
+                   					</p>
+                   					<button type="button" class="bg-transparent btn text-uppercase btn-services">
+                   						Read More
+                   						<i class="fa fa-long-arrow-right ml-3"></i>
+                   					</button>
+                   				</div>
+
+                   				<div class="col-md-4 col-sm-12 text-center">
+                   					<img src="https://firebasestorage.googleapis.com/v0/b/web-dinamica-d78f3.appspot.com/o/photos%2Fimgs%2Freminders.png?alt=media&token=7588c53e-f001-4833-98bf-0e9ac0da179b" alt="Icon" title="Icon" class="mb-4">
+                   					<p>
+                   						phoncus ut, imperdiet vel venenatis vitae justo ullam dictum felis eu pede mollis pretium massa.
+                   					</p>
+                   					<button type="button" class="bg-transparent btn text-uppercase btn-services">
+                   						Read More
+                   						<i class="fa fa-long-arrow-right ml-3"></i>
+                   					</button>
+                   				</div>
+                   			</div>
+                   		</div>
+                   	</section>
+
+                   	<!-- About us -->
+                   	<section class="about-us">
+                   		<div class="container ctn-about-us">
+                   			<div class="row">
+                   				<div class="col-md-6 col-sm-12">
+                   					<article class="text-center">
+                   						<p class="position-relative">
+                   							Donec quam felis ultricies nec pellentesque pretium quis sem massa quis enim. Donec pede justo fringilla vel aliquet nec vulputate eget magnis ligula eget.
+                   						</p>
+
+                   						<div class="mb-4 mt-4 ctn-profile">
+                   							<img src="https://firebasestorage.googleapis.com/v0/b/web-dinamica-d78f3.appspot.com/o/photos%2Fimgs%2Fautor.png?alt=media&token=d52a84ed-7eba-4cd1-be6c-f08ffbf5a2ef" alt="Avatar" title="Avatar">
+                   							<h2 class="mt-2">
+                   								user
+                   							</h2>
+
+                   							<p>
+                   								1
+                   							</p>
+                   						</div>
+                   					</article>
+                   				</div>
+
+                   				<div class="col-md-6 col-sm-12">
+                   					<article class="text-center">
+                   						<p class="position-relative">
+                   							Donec quam felis ultricies nec pellentesque pretium quis sem massa quis enim. Donec pede justo fringilla vel aliquet nec vulputate eget magnis ligula eget.
+                   						</p>
+
+                   						<div class="mb-4 mt-4 ctn-profile">
+                   							<img src="https://firebasestorage.googleapis.com/v0/b/web-dinamica-d78f3.appspot.com/o/photos%2Fimgs%2Fautor.png?alt=media&token=d52a84ed-7eba-4cd1-be6c-f08ffbf5a2ef" alt="Avatar" title="Avatar">
+                   							<h2 class="mt-2">
+                   								user
+                   							</h2>
+
+                   							<p>
+                   								2
+                   							</p>
+                   						</div>
+                   					</article>
+                   				</div>
+                   			</div>
+                   		</div>
+                   	</section>
+
+                   </main>
+
+                   <!-- Brand -->
+                   <section>
+                   	<div class="container ctn-brand text-center">
+                   		<div class="row">
+                   			<div class="col-md-3 col-sm-6 col-xs-12">
+                   				<div class="box-brand">
+                   					<h2 class="font-italic m-0 pt-2 text-uppercase">
+                   						Brand
+                   					</h2>
+
+                   					<p class="pb-2">
+                   						tagline here
+                   					</p>
+                   				</div>
+                   			</div>
+
+                   			<div class="col-md-3 col-sm-6 col-xs-12">
+                   				<div class="box-brand">
+                   					<h2 class="font-italic m-0 pt-2 text-uppercase">
+                   						Brand
+                   					</h2>
+
+                   					<p class="pb-2">
+                   						tagline here
+                   					</p>
+                   				</div>
+                   			</div>
+
+                   			<div class="col-md-3 col-sm-6 col-xs-12">
+                   				<div class="box-brand">
+                   					<h2 class="font-italic m-0 pt-2 text-uppercase">
+                   						Brand
+                   					</h2>
+
+                   					<p>
+                   						tagline here
+                   					</p>
+                   				</div>
+                   			</div>
+
+                   			<div class="col-md-3 col-sm-6 col-xs-12">
+                   				<div class="box-brand">
+                   					<h2 class="font-italic m-0 pt-2 text-uppercase">
+                   						Brand
+                   					</h2>
+
+                   					<p>
+                   						tagline here
+                   					</p>
+                   				</div>
+                   			</div>
+                   		</div>
+                   	</div>
+                   </section>
+
+
+
+  </body>
+</html>

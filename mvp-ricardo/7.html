@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <title></title>
+  </head>
+
+<style media="screen">
+
+*{
+
+padding: 0px;
+  margin: 0px;
+}
+
+
+
+
+.textos{
+
+padding: 40px;
+padding-left: 50px;
+text-align: left;
+
+
+}
+
+{
+
+text-align: center;
+color: white;
+
+}
+
+.parrafos{
+text-shadow: 5px 5px 5px black;
+font-size: 20px;
+}
+
+body{
+
+font-family: 'Fjalla One', sans-serif !important;
+
+}
+
+.formulario{
+
+
+background-image: url(../images/inicio.jpg);
+background-repeat: no-repeat;
+-webkit-background-size: cover;
+
+background-color: black;
+
+
+
+}
+
+.formulario p{
+
+  margin-bottom:0px !important;
+  color: #ffff;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.box-form{
+
+background: rgba(14, 44, 41, 0.8);
+margin: 20px;
+
+}
+
+.btnEnviar{
+
+margin: 20px;
+
+
+}
+
+/*cartas*/
+
+.cartas{
+
+background: rgba(135, 17, 17, 0.80);
+
+
+}
+
+
+.card{
+
+margin: 20px;
+
+
+}
+
+.center-block{
+
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.card-img-top{
+
+margin-top: 20px;
+
+
+}
+
+
+.card-title{
+
+text-align: center;
+
+}
+
+.card-deck{
+
+border-bottom-style: solid;
+padding-bottom: 50px;
+border-bottom-width: 0px;
+
+
+}
+
+
+
+
+.imagen{
+
+margin: 30px;
+color: white;
+
+}
+
+.modal-lg{
+
+max-width: 1800px;
+
+
+}
+
+.close{
+
+color: white;
+
+}
+/*footer*/
+
+
+#myFooter {
+	background-color: #005073;
+	color:white;
+}
+
+#myFooter .footer-copyright{
+	background-color: #383737;
+	padding-top:3px;
+	padding-bottom:3px;
+	text-align: center;
+}
+
+#myFooter .footer-copyright p{
+	margin:10px;
+	color: #ccc;
+}
+
+#myFooter ul{
+	list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+
+}
+
+#myFooter h5{
+	font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter a{
+	color:#d2d1d1;
+	text-decoration: none;
+}
+
+#myFooter a:hover, #myFooter a:focus{
+	text-decoration: none;
+	color:white;
+}
+
+#myFooter .myCols{
+	text-align: center;
+}
+
+#myFooter .social-networks{
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 38px;
+}
+
+#myFooter .social-networks a{
+
+}
+
+#myFooter .social-networks a:hover{
+	text-decoration: none;
+
+}
+
+
+@media screen and (max-width: 767px){
+	#myFooter {
+		text-align: center;
+	}
+}
+
+
+
+
+#myFooter{
+	flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+}
+
+
+.grupo{
+
+margin-bottom:50px;
+
+}
+
+.grupo  {
+text-align: center;
+color: #0B243B;
+
+}
+
+
+
+.grupo b{
+
+color: #0B243B;
+
+}
+
+
+.footer{
+
+background-color: #383737;
+padding-top: 3px;
+padding-bottom: 3px;
+text-align: center;
+color: white;
+
+}
+
+
+
+.col-md-4{
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+
+}
+
+.contacto{
+
+padding: 30px;
+text-align: center;
+}
+
+.texto{
+
+margin-top: 80px!important;
+
+}
+
+
+.modal-dialog {
+    max-width: 857px;
+    margin: 1.75rem auto;
+}
+
+.modal-content{
+
+color: white;
+
+}
+
+.modal-header{
+
+background-color: #005073;
+
+}
+
+.modal-footer{
+
+background-color: #005073;
+
+}
+
+.textos h4{
+
+text-align: right;
+
+}
+.gratis{
+
+width: 89%;
+color: white;
+
+
+}
+
+.inicio h1{
+
+text-shadow: 5px 5px 5px black;
+font-size: 85px;
+text-align: center;
+
+}
+
+@media (max-width: 1620px) {
+
+  .inicio h1{
+
+    font-size: 55px;
+
+  }
+
+  .gratis {
+
+    font-size: 26px;
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+/*efecto de cartas*/
+
+
+.cuadro {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.cuadro figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	height: auto;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+
+.cuadro figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.cuadro figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.cuadro figure figcaption::before,
+.cuadro figure figcaption::after {
+	pointer-events: none;
+}
+
+.cuadro figure figcaption,
+.cuadro figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.cuadro figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.cuadro figure  {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.cuadro figure  span {
+	font-weight: 800;
+}
+
+.cuadro figure ,
+.cuadro figure p {
+	margin: 1;
+}
+
+.cuadro figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+
+
+figure.effect-apollo {
+	background: #3498db;
+}
+
+figure.effect-apollo img {
+	opacity: 0.95;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale3d(1.05,1.05,1);
+	transform: scale3d(1.05,1.05,1);
+}
+
+figure.effect-apollo figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 180%; /*205*/
+	background: rgba(255,255,255,0.5);
+	content: '';
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+}
+figure.lg figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 205%; /*205*/
+	background: rgba(255,255,255,0.5);
+	content: '';
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+}
+
+figure.effect-apollo p {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 3em;
+	padding: 0 1em;
+	max-width: 150px;
+	border-right: 4px solid #fff;
+	text-align: right;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.effect-apollo  {
+	text-align: left;
+}
+
+figure.effect-apollo:hover img {
+	opacity: 0.6;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+figure.effect-apollo:hover figcaption::before {
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+}
+
+figure.effect-apollo:hover p {
+	opacity: 1;
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+
+
+/*cuadro grande */
+
+
+.cuadro-lg {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.cuadro-lg figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 880px;
+	max-height: 306px;
+	width: 48%;
+	height: auto;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+
+.cuadro-lg figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+  width: 100%;
+}
+
+.cuadro-lg figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.cuadro-lg figure figcaption::before,
+.cuadro-lg figure figcaption::after {
+	pointer-events: none;
+}
+
+.cuadro-lg figure figcaption,
+.cuadro-lg figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.cuadro-lg figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.cuadro-lg figure  {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.cuadro-lg figure  span {
+	font-weight: 800;
+}
+
+.cuadro-lg figure ,
+.cuadro-lg figure p {
+	margin: 1;
+}
+
+.cuadro-lg figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+.effect-apollo h2{
+
+
+text-shadow: 5px 5px 5px black;
+
+}
+
+
+
+/*responsivo alv*/
+
+@media only screen and (max-width: 20000px) {
+
+
+  .cuadro figure {
+      position: relative;
+      float: left;
+      overflow: hidden;
+      margin: 10px 1%;
+      min-width: 320px;
+      max-width: 100%;
+      max-height: 360px;
+      width: 100%;
+      height: auto;
+      background: #3085a3;
+      text-align: center;
+      cursor: pointer;
+
+}
+
+
+.cuadro figure figcaption, .cuadro figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+figure.effect-apollo img {
+
+    opacity: 0.95;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.05,1.05,1);
+    width: 100%;
+
+}
+
+    .cuadro-lg figure {
+
+        position: relative;
+        float: left;
+        overflow: hidden;
+        margin: 10px 1%;
+        min-width: 320px;
+        max-width: 880px;
+        max-height: 360px!important;
+      }
+
+}
+</style>
+
+  <body>
+    <nav class="navbar navbar-dark" style="background:#005073;">
+           <a class="navbar-brand" href="#">
+             <img src="images/icon1.png" width="60" height="40" alt="">
+               </a>
+                   </nav>
+
+   <div class="row">
+     <div class="col-md-6">
+         <div class="col">
+             <div class="cuadro" style="padding-top: 0em;">
+                 <figure class="effect-apollo">
+                     <img src="https://unsplash.it/800/410"  alt="img18"/>
+                     <figcaption>
+                         <h2>Next Generation firewalls</h2>
+                             <p>  <button type="button" class="btn btn-secondary boton" data-toggle="modal" data-target="#mod1">Saber más</button></p>
+                               </figcaption>
+                     </figure>
+                                       <figure class="effect-apollo">
+                                           <img src="https://unsplash.it/800/420" alt="img22"/>
+                                           <figcaption>
+                                             <h2>protección  avanzada contra malware</h2>
+                                                 <p>  <button type="button" class="btn btn-secondary boton" data-toggle="modal" data-target="#mod2">Saber más</button></p>
+                                                 </figcaption>
+                                     </figure>
+                     </div>
+                     <div class="cuadro" >
+                           <figure class="effect-apollo" style="width:100%;">
+                               <img src="https://unsplash.it/800/430" alt="img22"/>
+                                   <figcaption>
+                                     <h2>Cisco Umbrella</h2>
+                                         <p>  <button type="button" class="btn btn-secondary boton" data-toggle="modal" data-target="#mod3">Saber más</button></p>
+                                             </figcaption>
+                                     </figure>
+                     </div>
+             </div>
+   </div>
+   <div class="col-md-6">
+         <div class="col">
+           <div class="cuadro" >
+                 <figure class="effect-apollo">
+                     <img src="https://unsplash.it/800/490" alt="img22"/>
+                         <figcaption>
+                           <h2>Cisco meraki cloud managed</h2>
+                               <p>  <button type="button" class="btn btn-secondary boton" data-toggle="modal" data-target="#mod4">Saber más</button></p>
+                                   </figcaption>
+                           </figure>
+           </div>
+             <div class="cuadro" style="padding-top: 0em;">
+                 <figure class="effect-apollo">
+                   <img src="https://unsplash.it/800/440" alt="img18"/>
+                     <figcaption>
+                         <h2>Cisco AMP for Endpoints</h2>
+                           <p>  <button type="button" class="btn btn-secondary boton" data-toggle="modal" data-target="#mod5">Saber más</button></p>
+                         </figcaption>
+                 </figure>
+                 <figure class="effect-apollo">
+                     <img src="https://unsplash.it/800/450" alt="img22"/>
+                   <figcaption>
+                     <h2>Cisco AMP for Networks</h2>
+                       <p>  <button type="button" class="btn btn-secondary boton" data-toggle="modal" data-target="#mod6">Saber más</button></p>
+                       </figcaption>
+                   </figure>
+                   </div>
+               </div>
+     </div>
+     <div class="col-md-6">
+         <div class="col">
+             <div class="cuadro" style="padding-top: 0em;">
+                 <figure class="effect-apollo">
+                     <img src="https://unsplash.it/800/460" alt="img18"/>
+                     <figcaption>
+                         <h2>Servicios de identidad de cisco</h2>
+                             <p><button type="button" class="btn btn-secondary boton" data-toggle="modal" data-target="#mod7">Saber más</button></p>
+                               </figcaption>
+                     </figure>
+                                       <figure class="effect-apollo">
+                                           <img src="https://unsplash.it/800/470" alt="img22"/>
+                                           <figcaption>
+                                             <h2>Cisco Stealthwatch</h2>
+                                                 <p>  <button type="button" class="btn btn-secondary boton" data-toggle="modal" data-target="#mod8">Saber más</button></p>
+                                                 </figcaption>
+                                     </figure>
+                     </div>
+             </div>
+   </div>
+   <div class="col-md-6">
+       <div class="col">
+           <div class="cuadro" style="padding-top: 0em;">
+               <figure class="effect-apollo">
+                   <img src="https://unsplash.it/800/480" alt="img18"/>
+                   <figcaption>
+                       <h2>Cisco email security</h2>
+                           <p><button type="button" class="btn btn-secondary boton" data-toggle="modal" data-target="#mod9">Saber más</button></p>
+                             </figcaption>
+                   </figure>
+                                     <figure class="effect-apollo">
+                                         <img src="https://unsplash.it/800/490" alt="img22"/>
+                                         <figcaption>
+                                           <h2>Seguridad Cisco web security</h2>
+                                               <p>  <button type="button" class="btn btn-secondary boton" data-toggle="modal" data-target="#mod10">Saber más</button></p>
+                                               </figcaption>
+                                   </figure>
+                   </div>
+           </div>
+   </div>
+     </div>
+
+   <!-- Modales  -->
+   <div class="modal fade" id="mod1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">Next Generation firewalls</h5>
+         <button type="button" class="cerrar" data-dismiss="modal" aria-label="cerrar">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="container-fluid">
+           <div class="row">
+             <img src="https://unsplash.it/800/500" width="100%" height="100%" alt="">
+           </div>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+       </div>
+     </div>
+   </div>
+   </div>
+   <div class="modal fade" id="mod2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">protección avanzada contra malware</h5>
+         <button type="button" class="cerrar" data-dismiss="modal" aria-label="cerrar">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="container-fluid">
+           <div class="row">
+             <img src="https://unsplash.it/800/502" width="100%" height="100%" alt="">
+           </div>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+       </div>
+     </div>
+   </div>
+   </div>
+   <div class="modal fade" id="mod3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">Cisco Umbrella</h5>
+         <button type="button" class="cerrar" data-dismiss="modal" aria-label="cerrar">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="container-fluid">
+           <div class="row">
+             <img src="https://unsplash.it/800/503" width="100%" height="100%" alt="">
+           </div>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+       </div>
+     </div>
+   </div>
+   </div>
+   <div class="modal fade" id="mod4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">Cisco meraki cloud managed</h5>
+         <button type="button" class="cerrar" data-dismiss="modal" aria-label="cerrar">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="container-fluid">
+           <div class="row">
+             <img src="https://unsplash.it/800/504" width="100%" height="100%" alt="">
+           </div>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+       </div>
+     </div>
+   </div>
+   </div>
+   <div class="modal fade" id="mod5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">Cisco AMP for Endpoints</h5>
+         <button type="button" class="cerrar" data-dismiss="modal" aria-label="cerrar">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="container-fluid">
+           <div class="row">
+             <img src="https://unsplash.it/800/505" width="100%" height="100%" alt="">
+           </div>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+       </div>
+     </div>
+   </div>
+   </div>
+   <div class="modal fade" id="mod6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">Cisco AMP for Networks</h5>
+         <button type="button" class="cerrar" data-dismiss="modal" aria-label="cerrar">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="container-fluid">
+           <div class="row">
+             <img src="https://unsplash.it/800/506" width="100%" height="100%" alt="">
+           </div>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+       </div>
+     </div>
+   </div>
+   </div>
+   <div class="modal fade" id="mod7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">Servicios de Identidad De Cisco</h5>
+         <button type="button" class="cerrar" data-dismiss="modal" aria-label="cerrar">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="container-fluid">
+           <div class="row">
+             <img src="https://unsplash.it/800/507" width="100%" height="100%" alt="">
+           </div>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+       </div>
+     </div>
+   </div>
+   </div>
+   <div class="modal fade" id="mod8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">Cisco Stealthwatch</h5>
+         <button type="button" class="cerrar" data-dismiss="modal" aria-label="cerrar">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="container-fluid">
+           <div class="row">
+             <img src="https://unsplash.it/800/508" width="100%" height="100%" alt="">
+           </div>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+       </div>
+     </div>
+   </div>
+   </div>
+   <div class="modal fade" id="mod9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">Cisco email security</h5>
+         <button type="button" class="cerrar" data-dismiss="modal" aria-label="cerrar">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="container-fluid">
+           <div class="row">
+             <img src="https://unsplash.it/800/509" width="100%" height="100%" alt="">
+           </div>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+       </div>
+     </div>
+   </div>
+   </div>
+   <div class="modal fade" id="mod10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">Seguridad Cisco web security</h5>
+         <button type="button" class="cerrar" data-dismiss="modal" aria-label="cerrar">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="container-fluid">
+           <div class="row">
+             <img src="https://unsplash.it/800/510" width="100%" height="100%" alt="">
+           </div>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+       </div>
+     </div>
+   </div>
+   </div>
+           <!-- hover       <div class="container-fluid" >
+                   <div class="row">
+                     <br>
+                         <div class="col-md-3" >
+                   <div class="hovereffect">
+                       <img class="" src="images/services.png" height="250" width="350" >
+                           <div class="overlay">
+                               <h2>Servicios</h2>
+               				<p>
+               					<a href="servicios.html"> <img class="tarjeta" src="images/servicio.svg" height="250" width="350"> </a>
+               				</p>
+                           </div>
+                   </div>
+                         </div>
+                         <div class=" col-md-3" >
+                           <div class="hovereffect">
+                               <img class="" src="images/servicios.png"  height="250" width="350" alt="">
+                                   <div class="overlay">
+                                       <h2>Soluciones tecnológicas</h2>
+                       				<p>
+                       					<a href="soluciones.html"><img  class="tarjeta" src="images/solucion.svg"></a>
+                       				</p>
+                                   </div>
+                           </div>
+                         </div>
+                         <div class="clearfix visible-xs"></div>
+                         <div class=" col-md-3" >
+                           <div class="hovereffect">
+                               <img class="" src="images/certificaciones.png"  height="250" width="350" alt="">
+                                   <div class="overlay">
+                                       <h2>Certificaciones</h2>
+                               <p>
+                                 <a href="certificaciones.html">   <img class="tarjeta" src="images/certificado.svg" alt=""> </a>
+                               </p>
+                                   </div>
+                           </div>
+                         </div>
+                         <div class="col-md-3" >
+                           <div class="hovereffect">
+                               <img class="" src="images/nosotros.png"  height="250" width="350" alt="">
+                                   <div class="overlay">
+                                       <h2>Nosotros</h2>
+                       				<p>
+                       					<a href="nosotros.html"> <img class="tarjeta" src="images/grupo.svg" alt=""> </a>
+                       				</p>
+                                   </div>
+                           </div>
+                         </div>
+                       </div>
+             </div>
+           -->
+
+
+  </body>
+</html>

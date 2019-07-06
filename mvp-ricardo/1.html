@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+
+<style media="screen">
+  ./* O grid utilizar calc para diminui o valor total das margens */
+.grid-calc {
+	width: calc(33.33% - 20px);
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	box-sizing: border-box;
+}
+
+/* Permite criar um bloco que se expanda, mantendo o conteúdo no grid definido do site. 1180px é o valor total do CONTAINER menos 20px que são as margens dos grids*/
+.fluid-left {
+	width: 50%;
+	padding-left: calc((100% - 1180px)/2);
+	box-sizing: border-box;
+	float: left;
+	background: #89CA57;
+}
+
+.fluid-right {
+	width: 50%;
+	padding-right: calc((100% - 1180px)/2);
+	box-sizing: border-box;
+	float: left;
+	background: #FFE130;
+}
+
+/* O container tem 1200px no máximo, caso você utilize outro valor, deverá mudar também nas classes fluid-right e fluid-left, para manter o conteúdo das mesmas no grid */
+.container {
+	max-width: 1200px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 auto;
+}
+
+.container-fluid {
+	width: 100%;
+}
+
+/* Clearfix para limpar o float */
+.container::after, .container::before, .container-fluid::after, .container-fluid::before {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/* Estilos mobile */
+
+@media (max-width: 720px) {
+
+.grid-calc {
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.fluid-left, .fluid-right {
+	width: 100%;
+	padding: 0px;
+}
+
+}
+
+/* Estilos gerais para o exemplo */
+
+#amarela {
+	background: #FFE130;
+}
+
+#rosa {
+	background: #F61D73;
+}
+
+#roxa {
+	background: #903DEB;
+}
+
+#amarela, #rosa, #roxa {
+	text-align: center;
+	padding: 80px 0;
+	font-size: 24px;
+	font-family: monaco;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: 24px;
+	line-height: 1.3em;
+	padding: 80px 20px;
+}
+
+body {
+	font-family: georgia;
+}
+
+h1 {
+	text-align: center;
+	padding: 40px 0;
+	font-size: 36px;
+	font-family: Lusitana;
+}
+
+footer {
+	text-align: center;
+	margin: 40px;
+}
+
+#origamid {
+	font-family: monaco;
+	text-decoration: none;
+	color: #693BB6;
+	display: inline-block;
+}
+
+#origamid::after, #origamid::before {
+	content: '';
+	display: block;
+	background: #693BB6;
+	width: 0;
+	height: 2px;
+	border-radius: 4px;
+	margin: 6px auto 6px auto;
+	transition: all .2s ease;
+}
+
+#origamid:hover::after, #origamid:hover::before {
+	width: 100%;
+}
+
+</style>
+
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="assets/hacker.svg" width="50" height="50" alt="">
+      </a>
+    </nav>
+
+    <h1>Bienvenido</h1>
+
+  <section class="container">
+  	<div class="grid-calc" id="amarela">lorem</div>
+  	<div class="grid-calc" id="rosa">Lorem</div>
+  	<div class="grid-calc" id="roxa">Lorem</div>
+  </section>
+
+  <section class="container-fluid">
+  	<div class="fluid-left">
+  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  	</div>
+  	<div class="fluid-right">
+  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  	</div>
+  </section>
+
+
+
+<footer class="row">
+  <div class="col-md-6">
+    <p>© Copyright no one at all. Go to town.</p>
+  </div>
+  <div class="col-md-6">
+    <ul class="nav nav-pills pull-right">
+      <li><a href="#">Section 1</a></li>
+      <li><a href="#">Section 2</a></li>
+      <li><a href="#">Section 3</a></li>
+      <li><a href="#">Section 4</a></li>
+      <li><a href="#">Section 5</a></li>
+      <li><a href="#">Section 6</a></li>
+    </ul>
+  </div>
+</footer>
+
+  </body>
+</html>

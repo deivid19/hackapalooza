@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>Login</title>
+  </head>
+
+<style media="screen">
+/* Generated from SCSS and GULP autoprefixer */
+html,
+body {
+    height: 100%
+}
+
+.can{
+
+margin-left: 25%;
+
+}
+
+.login__group{
+
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom:1%;
+
+}
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+.login__form {
+    background: #fff;
+    color: #333;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 5px
+}
+.login__form .login__header {
+    padding-top: 30px;
+    text-align: center;
+    margin-bottom: 60px
+}
+.login__form .login__header .login__title {
+    font-size: 24px;
+    font-weight: 400
+}
+.login__form .login__main {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto
+}
+.login__form .login__main .login__group {
+    position: relative
+}
+.login__form .login__main .login__group .login__input {
+    margin-top: 50px;
+    padding: 10px 10px 10px 5px;
+    color: #333;
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    font-size: 16px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #d0dce7;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+.login__form .login__main .login__group .login__input:focus {
+    outline: none
+}
+.login__form .login__main .login__group .login__input:focus ~ label,
+.login__form .login__main .login__group .login__input:valid ~ label {
+    top: -20px;
+    font-size: 12px;
+    text-transform: uppercase
+}
+.login__form .login__main .login__group .login__label {
+    color: #333;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    -webkit-transition: .2s ease all;
+    transition: .2s ease all
+}
+.login__form .login__main .login__terms {
+    font-size: 14px;
+    color: #a8b8c4;
+    margin: 40px auto;
+    line-height: 19px;
+}
+.login__form .login__main .login__terms a {
+    text-decoration: none;
+    color: #98b28c;
+}
+.login__form .login__button {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    background: #98b28c;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    height: 45px;
+    font-size: 14px;
+    bottom: 0;
+    position: absolute
+}
+
+.login__button:hover {
+  cursor: pointer;
+}
+
+.login__bar {
+    position: relative;
+    display: block
+}
+.login__bar:before,
+.login__bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #007ee5;
+    transition: .2s ease all;
+    -moz-transition: .2s ease all;
+    -webkit-transition: .2s ease all
+}
+.login__bar:before {
+    left: 50%
+}
+.login__bar:after {
+    right: 50%
+}
+input:focus ~ .login__bar:before,
+input:focus ~ .login__bar:after {
+    width: 50%
+}
+@media (min-width: 620px) {
+    body {
+        background: url("https://unsplash.it/800/410") no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center
+    }
+    .login__form {
+        max-width: 400px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 3%;
+        width: 80%!important;
+    }
+    .login__title {
+        position: relative
+    }
+    .login__footer {
+        text-align: center
+    }
+    .login__footer .login__button {
+        bottom: initial;
+        position: initial;
+        width: 320px
+    }
+}
+
+</style>
+
+
+  <body>
+
+    <form class="login__form" method="POST" name="form" action="#">
+       <header class="login__header">
+         <div class="col">
+           <div class="col">
+             <video id="video" width="360" height="80" autoplay></video>
+           </div>
+
+           <div class="col can">
+             <canvas id="canvas" width="360" height="80"></canvas>
+           </div>
+
+
+         </div>
+          <h1 class="login__title">Login</h1>
+       </header>
+       <main class="login__main">
+          <div class="login__group">
+             <button type="button" class="btn btn-info" id="snap">Tomar Foto</button>
+          </div>
+          <div class="login__group">
+             <button type="button" class="btn btn-info" id="btndownload" >Download</button>
+          </div>
+          <p class="login__terms">Al entrar acepta los <a href="#">Terminos</a> y la <a href="#">Politica de privacidad</a></p>
+       </main>
+       <footer class="login__footer">
+
+       </footer>
+    </form>
+
+
+  </body>
+
+
+
+
+    </script>
+
+
+    <script>
+
+      // Grab elements, create settings, etc.
+    var video = document.getElementById('video');
+
+    // Get access to the camera!
+    if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        // Not adding `{ audio: true }` since we only want video now
+        navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+            //video.src = window.URL.createObjectURL(stream);
+            video.srcObject = stream;
+            video.play();
+        });
+    }
+
+    // Elements for taking the snapshot
+  var canvas = document.getElementById('canvas');
+  var context = canvas.getContext('2d');
+  var video = document.getElementById('video');
+
+  // Trigger photo take
+  document.getElementById("snap").addEventListener("click", function() {
+    context.drawImage(video, 0, 0, 160, 80);
+  });
+
+
+  </script>
+
+  <script type="text/javascript">
+    // Initializing
+  window.onload = function(){
+  var dwn = document.getElementById('btndownload'),
+  canvas = document.getElementById('canvas'),
+  context = canvas.getContext('2d');
+
+
+
+  // Event handler for download
+  dwn.onclick = function(){
+  download(canvas, 'assets/myimage.png');
+  }
+
+  }
+
+
+  // Source from:  http://stackoverflow.com/questions/18480474/how-to-save-an-image-from-canvas
+
+  /* Canvas Donwload */
+  function download(canvas, filename) {
+  /// create an "off-screen" anchor tag
+  var lnk = document.createElement('a'), e;
+
+  /// the key here is to set the download attribute of the a tag
+  lnk.download = filename;
+
+  /// convert canvas content to data-uri for link. When download
+  /// attribute is set the content pointed to by link will be
+  /// pushed as "download" in HTML5 capable browsers
+  lnk.href = canvas.toDataURL("image/png;");
+
+  /// create a "fake" click-event to trigger the download
+  if (document.createEvent) {
+  e = document.createEvent("MouseEvents");
+  e.initMouseEvent("click", true, true, window,
+               0, 0, 0, 0, 0, false, false, false,
+               false, 0, null);
+
+  lnk.dispatchEvent(e);
+  } else if (lnk.fireEvent) {
+  lnk.fireEvent("onclick");
+  }
+  }
+          </script>
+
+
+</html>

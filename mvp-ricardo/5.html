@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+
+<style media="screen">
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+*, *::before, *::after, html{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Open Sans";
+  font-size: .9rem;
+  font-weight: 600;
+  background: -webkit-linear-gradient(45deg, #f7ff00, #db36a4);
+  background: -o-linear-gradient(45deg, #f7ff00, #db36a4);
+  background: linear-gradient(45deg, #f7ff00, #db36a4);
+/* background: linear-gradient(to right, #ec008c, #fc6767);   */
+
+}
+
+
+.pannel--wrapper{
+  display: -ms-grid;
+  display: grid;
+  margin:  0 10em;
+  min-height: 70%;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+/*   border: 2px solid black; */
+  grid-gap: .4em;
+}
+
+.pannel{
+  border: 3px solid black;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  -webkit-box-shadow: 3px 2px 4px 1px rgba(0,0,0,0.5) ;
+          box-shadow: 3px 2px 4px 1px rgba(0,0,0,0.5) ;
+  background: black;
+  -webkit-transition:
+    all ease-in-out 500ms,
+    background ease-in-out 500ms,
+    color ease-in-out 500ms,
+    -webkit-transform ease 500ms;
+  transition:
+    all ease-in-out 500ms,
+    background ease-in-out 500ms,
+    color ease-in-out 500ms,
+    -webkit-transform ease 500ms;
+  -o-transition:
+    all ease-in-out 500ms,
+    transform ease 500ms,
+    background ease-in-out 500ms,
+    color ease-in-out 500ms;
+  transition:
+    all ease-in-out 500ms,
+    transform ease 500ms,
+    background ease-in-out 500ms,
+    color ease-in-out 500ms;
+  transition:
+    all ease-in-out 500ms,
+    transform ease 500ms,
+    background ease-in-out 500ms,
+    color ease-in-out 500ms,
+    -webkit-transform ease 500ms;
+}
+
+.pannel:active, .pannel:hover{
+  -webkit-transform: scale(1.06);
+      -ms-transform: scale(1.06);
+          transform: scale(1.06);
+  border: 3px solid white;
+  color: black;
+  text-shadow: 2px 0px 1px #fff;
+  -webkit-animation: loading-button-animation 1.5s linear infinite;
+          animation: loading-button-animation 1.5s linear infinite;
+}
+
+@-webkit-keyframes loading-button-animation{
+    from {
+       background-position: 0 0;
+     }
+     to {
+       background-position: 50px 0;
+     }
+}
+
+@keyframes loading-button-animation{
+    from {
+       background-position: 0 0;
+     }
+     to {
+       background-position: 50px 0;
+     }
+}
+
+.pannel-1{
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+  background-image: url('data:image/svg+xml,%3Csvg width="100" height="50" viewBox="0 0 52 26" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="#FA016D" fill-opacity="0.5"%3E%3Cpath d="M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z" /%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+.pannel-1 .pannel-heading{
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.pannel-1:active, .pannel-1:hover{
+  background: #FA016D;
+  background-image: url('data:image/svg+xml,%3Csvg width="52" height="26" viewBox="0 0 52 26" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="#fff" fill-opacity="0.6"%3E%3Cpath d="M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z" /%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+.pannel-3{
+  -ms-grid-column: 4;
+  grid-column: 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 0H0v36h36V0zM15.126 2H2v13.126c.367.094.714.24 1.032.428L15.554 3.032c-.188-.318-.334-.665-.428-1.032zM18 4.874V18H4.874c-.094-.367-.24-.714-.428-1.032L16.968 4.446c.318.188.665.334 1.032.428zM22.874 2h11.712L20 16.586V4.874c1.406-.362 2.512-1.468 2.874-2.874zm10.252 18H20v13.126c.367.094.714.24 1.032.428l12.522-12.522c-.188-.318-.334-.665-.428-1.032zM36 22.874V36H22.874c-.094-.367-.24-.714-.428-1.032l12.522-12.522c.318.188.665.334 1.032.428zm0-7.748V3.414L21.414 18h11.712c.362-1.406 1.468-2.512 2.874-2.874zm-18 18V21.414L3.414 36h11.712c.362-1.406 1.468-2.512 2.874-2.874zM4.874 20h11.712L2 34.586V22.874c1.406-.362 2.512-1.468 2.874-2.874z' fill='#FDEB71' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.pannel-3 .pannel-heading{
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.pannel-3:active, .pannel-3:hover{
+  background: #FDEB71;
+  background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 0H0v36h36V0zM15.126 2H2v13.126c.367.094.714.24 1.032.428L15.554 3.032c-.188-.318-.334-.665-.428-1.032zM18 4.874V18H4.874c-.094-.367-.24-.714-.428-1.032L16.968 4.446c.318.188.665.334 1.032.428zM22.874 2h11.712L20 16.586V4.874c1.406-.362 2.512-1.468 2.874-2.874zm10.252 18H20v13.126c.367.094.714.24 1.032.428l12.522-12.522c-.188-.318-.334-.665-.428-1.032zM36 22.874V36H22.874c-.094-.367-.24-.714-.428-1.032l12.522-12.522c.318.188.665.334 1.032.428zm0-7.748V3.414L21.414 18h11.712c.362-1.406 1.468-2.512 2.874-2.874zm-18 18V21.414L3.414 36h11.712c.362-1.406 1.468-2.512 2.874-2.874zM4.874 20h11.712L2 34.586V22.874c1.406-.362 2.512-1.468 2.874-2.874z' fill='#000' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.pannel-2{
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='#BC78EC' fill-opacity='0.4'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.pannel-2:active, .pannel-2:hover{
+  background: #BC78EC;
+  background-image: url("data:image/svg+xml,%3Csvg width='55' height='55' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='#fff' fill-opacity='0.4'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.pannel-4{
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  background-image: url('data:image/svg+xml,%3Csvg width="80" height="80" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z" fill="#FA016D" fill-opacity="0.6" fill-rule="evenodd"/%3E%3C/svg%3E');
+}
+
+.pannel-4 .pannel-heading{
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.pannel-4:active, .pannel-4:hover{
+  background: #FA016D;
+  background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z" fill="#fff" fill-opacity="0.4" fill-rule="evenodd"/%3E%3C/svg%3E');
+}
+
+.pannel-5{
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3 / 5;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='#BC78EC' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.pannel-5 .pannel-heading{
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.pannel-5:active, .pannel-5:hover{
+background: #BC78EC;
+background-image: url("data:image/svg+xml,%3Csvg width='90' height='90' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='#fff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.pannel-6{
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  grid-row: 5 / 7;
+/*   justify-content: flex-end; */
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="46" height="82" viewBox="0 0 36 72"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="#FDEB71" fill-opacity="0.3"%3E%3Cpath d="M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')
+}
+
+.pannel-6:active, .pannel-6:hover{
+  background: #FDEB71;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="56" height="92" viewBox="0 0 36 72"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="#fff" fill-opacity="0.7"%3E%3Cpath d="M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+
+}
+
+@media screen and (max-width: 1200px){
+  body{
+    margin: 30px auto;
+  }
+
+  .pannel-1{
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+
+  .pannel-2{
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+  }
+
+  .pannel-3{
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / 5;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+
+  .pannel-1 .pannel-heading, .pannel-3 .pannel-heading {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+
+}
+
+@media screen and (max-width: 980px) {
+  body{
+    margin: 2em auto;
+  }
+
+  .pannel-1{
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+
+  .pannel-2{
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+
+  .pannel-3{
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+
+  .pannel-4{
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+
+  .pannel-5{
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 5;
+    grid-row: 5;
+  }
+
+  .pannel-6{
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 6;
+    grid-row: 6;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  body{
+    margin: 0;
+  }
+
+  .pannel--wrapper{
+  font-size: .8rem;
+   font-weight: 400;
+  display: -ms-grid;
+  display: grid;
+  margin:  2rem;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  }
+
+  .pannel-1 .pannel-heading, .pannel-5 .pannel-heading, .pannel-4 .pannel-heading {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+
+
+
+</style>
+
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="assets/hacker.svg" width="50" height="50" alt="">
+      </a>
+    </nav>
+
+
+    <div class="pannel--wrapper">
+      <article class="pannel pannel-1">
+        <h2 class="pannel-heading">Panel 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur voluptas non possimus est iusto. Distinctio consequatur voluptas non possimus est iusto.</p>
+      </article>
+      <article class="pannel pannel-2">
+        <h2 class="pannel-heading">Panel 2</h2>
+        <p class="pannel-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur voluptas non possimus est iusto, laboriosam aliquam assumenda reiciendis qui voluptates nisi obcaecati sed. Iure maiores dolor ut itaque quo! Distinctio consequatur voluptas non possimus est iusto.</p>
+      </article>
+      <article class="pannel pannel-3">
+        <h2 class="pannel-heading">Panel 3</h2>
+        <p class="pannel-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur voluptas non possimus est iusto. Distinctio consequatur voluptas non possimus est iusto.</p>
+      </article>
+      <article class="pannel pannel-4">
+        <h2 class="pannel-heading">Panel 4</h2>
+        <p class="pannel-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur voluptas non possimus est iusto. Distinctio consequatur voluptas non possimus est iusto</p>
+      </article>
+      <article class="pannel pannel-5">
+        <h2 class="pannel-heading">Panel 5</h2>
+        <p class="pannel-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur voluptas non possimus est iusto. Distinctio consequatur voluptas non possimus est iusto.</p>
+      </article>
+      <article class="pannel pannel-6">
+        <h2 class="pannel-heading">Panel 6</h2>
+        <p class="pannel-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur voluptas non possimus est iusto, laboriosam aliquam assumenda reiciendis qui voluptates nisi obcaecati sed. Iure maiores dolor ut itaque quo! Distinctio consequatur voluptas non possimus est iusto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio consequatur voluptas non possimus est iusto, laboriosam aliquam assumenda reiciendis qui voluptates nisi obcaecati sed. Iure maiores dolor ut itaque quo! Distinctio consequatur voluptas non possimus est iusto.</p>
+      </article>
+    </div>
+
+
+
+
+    </footer>
+  </div>
+
+
+  </body>
+</html>
