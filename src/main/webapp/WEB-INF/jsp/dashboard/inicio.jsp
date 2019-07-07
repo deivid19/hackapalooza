@@ -18,12 +18,13 @@
     
         ${estilo}
     
-    <body>
+    <body id="principal">
 
         <nav class="navbar navbar-light bg-light">
           <a class="navbar-brand" href="#">
-            <img src="assets/hacker.svg" width="50" height="50" alt="">
+            <img src="../complementos/img/eclipse.svg" width="50" height="50" alt="">
           </a>
+          <a href="${pageContext.request.contextPath}/"><i class="fa fa-power-off"></i> Salir</a>
         </nav>
         <h1>Bienvenido!</h1>
 
@@ -44,5 +45,38 @@
                 </ul>
             </div>
         </footer>
+
+        <script>
+
+            $( document ).ready(function() {
+                var col1 = "${color1}";
+                var split1 = col1.split(',')[0] + "CC";
+                var split2 = col1.split(',')[0];
+                //console.log("1: " + split1 + " 2: " + split2);
+
+                document.getElementById('principal').style.backgroundColor = col1.split(',')[1] + "3F";
+                document.getElementById('color1').style.backgroundColor = col1.split(',')[0];
+                document.getElementById('color2').style.backgroundColor = col1.split(',')[0] + "5C";
+
+                if (document.getElementById('color3') !=null) {
+                    document.getElementById('color3').style.backgroundColor = col1.split(',')[0] + "CC";
+                }
+
+                if (document.getElementById('color4') !=null) {
+                    document.getElementById('color4').style.backgroundColor = col1.split(',')[0] + "1F";
+                }
+                
+                if (document.getElementById('color5') !=null) {
+                    document.getElementById('color5').style.backgroundColor = col1.split(',')[0] + "82";
+                }
+
+                if (document.getElementById('color6') !=null) {
+                    document.getElementById('color6').style.backgroundColor = col1.split(',')[0] + "2A";
+                }
+                
+            });
+            
+        </script>
+
     </body>
 </html>

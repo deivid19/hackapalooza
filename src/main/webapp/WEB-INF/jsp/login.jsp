@@ -239,10 +239,10 @@
            </footer>
         </form>  
 
-        <form method="POST" enctype="multipart/form-data" id="fileUploadForm">
-            <input type="file" name="file"/><br/><br/>
+        <!--<form method="POST" enctype="multipart/form-data" id="fileUploadForm">
+            <input type="file" name="image"/><br/><br/>
             <input type="submit" value="Submit" id="btnSubmit"/>
-        </form>          
+        </form>-->
 
     </body>
 
@@ -319,29 +319,51 @@
         var context = canvas.getContext('2d');
         var video = document.getElementById('video');
 
+
         // Trigger photo take
         document.getElementById("snap").addEventListener("click", function() {
             context.drawImage(video, 0, 0, 160, 80);
 
-            var formdata = canvas.toDataURL();
-            //console.log("imagen: " + formdata);
+            var dataURL = canvas.toDataURL();
+            /*var data = new FormData();
+            data.append("image", imagen);*/
+
+            var blobBin = atob(dataURL.split(',')[1]);
+            var array = [];
+            for(var i = 0; i < blobBin.length; i++) {
+                array.push(blobBin.charCodeAt(i));
+            }
+            var file=new File([new Uint8Array(array)],"foto.png", {type: "application/octet-stream"});
+
+
+            var formdata = new FormData();
+            formdata.append("image", file);
+            //console.log("imagen: " + img);
 
             $.ajax({
-                url: 'http://max-facial-emotion-classifier.max.us-south.containers.appdomain.cloud/model/predict',
-                type: 'POST',
-                data: {image: 'C:/Users/deivi/Downloads/foto.png'},
+                type: "POST",
                 enctype: 'multipart/form-data',
+                url: "http://localhost:8080/HackaProject/nuevoPost",
+                //url: "http://max-facial-emotion-classifier.max.us-south.containers.appdomain.cloud/model/predict",
+                //url: "http://max-facial-age-estimator.max.us-south.containers.appdomain.cloud/model/predict",
+                data: formdata,
                 processData: false,
                 contentType: false,
                 cache: false,
-                //async:false,
-                success: function(data) {
-                    console.log("correcto");
-                    console.log(data);
+                timeout: 600000,
+                success: function (data) {
+
+                    //console.log(data);
+                    //var valores = JSON.stringify(data);
+                    window.location = "http://localhost:8080/HackaProject/dashboard/inicio";
+                    //console.log(data);
+                    
+
                 },
-                error: function(data){
-                    console.log("error");
-                    console.log(data);
+                error: function (e) {
+
+                    console.log("ERROR : " + e);
+
                 }
             });
         });

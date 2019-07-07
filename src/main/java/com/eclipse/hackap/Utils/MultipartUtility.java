@@ -146,6 +146,15 @@ public class MultipartUtility {
             reader.close();
             httpConn.disconnect();
         } else {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    httpConn.getErrorStream()));
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                response.add(line);
+            }
+            
+            System.out.println(reader);
+            reader.close();
             throw new IOException("Server returned non-OK status: " + status);
         }
  
