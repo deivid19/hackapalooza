@@ -20,13 +20,13 @@
     
     <body id="principal">
 
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-dark bg-dark">
           <a class="navbar-brand" href="#">
-            <img src="../complementos/img/eclipse.svg" width="50" height="50" alt="">
+            <img src="../complementos/img/hack.png" width="100" height="60" alt="">
           </a>
-          <a href="${pageContext.request.contextPath}/"><i class="fa fa-power-off"></i> Salir</a>
+          <h1>Bienvenido!</h1>
+          <a href="${pageContext.request.contextPath}/"><h4> Salir </h4></a>
         </nav>
-        <h1>Bienvenido!</h1>
 
         ${dashboard}
 

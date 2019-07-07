@@ -218,6 +218,7 @@ public class AccessSystemController implements Serializable {
                     proba = emocion.getDouble("probability");
                     emofinal = emocion.getString("label");
                     id_emocion = emocion.getInt("label_id");
+                    System.out.println("Emocion" + j + " es: " + emofinal);
                 }
             }
             System.out.println("La emocion es: "+ emofinal+" con una proba de: "+proba);
